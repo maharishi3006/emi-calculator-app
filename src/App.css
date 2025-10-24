@@ -1,0 +1,104 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  /* Vibrant gradient background */
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.calculator-card {
+  max-width: 450px;
+  width: 100%;
+  /* Frosted glass effect */
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.card-title {
+  font-weight: 700;
+  /* Gradient text color */
+  background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #555;
+}
+
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #764ba2;
+  box-shadow: 0 0 0 0.25rem rgba(118, 75, 162, 0.25);
+}
+
+.btn-calculate {
+  /* Vibrant gradient button */
+  background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-calculate:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(248, 87, 166, 0.4);
+  color: white;
+}
+
+/* --- Result Display Styling --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-container {
+  background-color: #f0f2f5;
+  border-left: 5px solid #667eea;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.result-container h4 {
+    color: #182848;
+    font-weight: 600;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-item span {
+  color: #555;
+}
+
+.result-item strong {
+  color: #333;
+}
